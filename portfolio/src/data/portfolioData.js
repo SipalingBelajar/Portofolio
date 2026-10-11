@@ -17,8 +17,8 @@ export const profile = {
     "I'm a Teknik Informatika graduate from Universitas Nusa Mandiri, based in Jakarta Timur. My work sits where software meets the people using it.",
     "As a front end developer, I turned designs into responsive, user-friendly interfaces, tuned them for speed, and tested them before release. Before that, in IT support, I fixed the problems users actually run into — broken apps, slow networks, missing licenses — which taught me to build things that hold up outside the dev environment.",
   ],
-  photo: "/arif.webp", // square face crop, used as the hero avatar (files live in /public)
-  portrait: "/arif-portrait.webp", // 4:5 portrait, used in the About section
+ photo: "arif.webp",
+portrait: "arif-portrait.webp",
   location: "Jakarta Timur, Indonesia",
   email: "arifrachmanramli16@gmail.com",
   phone: "088290381487",
