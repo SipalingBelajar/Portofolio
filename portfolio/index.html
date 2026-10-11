@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>Arif Rachman Ramli — Front End Developer & IT Support</title>
+    <meta
+      name="description"
+      content="Portfolio of Arif Rachman Ramli, a Jakarta-based front end developer and IT support specialist working with React, Laravel and Tailwind CSS."
+    />
+    <meta name="author" content="Arif Rachman Ramli" />
+
+    <!-- Open Graph (add public/og-image.png, 1200x630, then uncomment og:image) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Arif Rachman Ramli — Front End Developer & IT Support" />
+    <meta
+      property="og:description"
+      content="Responsive web interfaces with React and Laravel, plus hands-on IT support experience."
+    />
+    <!-- <meta property="og:image" content="https://your-domain.com/og-image.png" /> -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content="#0B1120" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F8FAFC" media="(prefers-color-scheme: light)" />
+
+    <!-- Apply the saved or system theme before React loads, so there's no white flash -->
+    <script>
+      (function () {
+        var dark = true;
+        try {
+          var saved = localStorage.getItem("theme");
+          dark = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        } catch (e) {}
+        var root = document.documentElement;
+        root.classList.toggle("dark", dark);
+        root.style.colorScheme = dark ? "dark" : "light";
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
