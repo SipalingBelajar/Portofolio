@@ -18,11 +18,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Find project folder
+        id: find
+        run: |
+          file=$(find . -name package.json -not -path '*/node_modules/*' | head -n 1)
+          echo "dir=$(dirname "$file")" >> "$GITHUB_OUTPUT"
       - run: npm install
+        working-directory: ${{ steps.find.outputs.dir }}
       - run: npm run build
+        working-directory: ${{ steps.find.outputs.dir }}
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ${{ steps.find.outputs.dir }}/dist
   deploy:
     needs: build
     runs-on: ubuntu-latest
